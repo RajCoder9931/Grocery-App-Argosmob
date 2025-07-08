@@ -41,15 +41,7 @@ const UnitsPage: React.FC = () => {
     shortName: '',
     description: ''
   });
-  const handleAddUnit = () => {
-    setEditingUnit(null);
-    setFormData({
-      name: '',
-      shortName: '',
-      description: ''
-    });
-    setIsFormOpen(true);
-  };
+ 
   const handleEditUnit = (unit: Unit) => {
     setEditingUnit(unit);
     setFormData({
@@ -102,10 +94,7 @@ const UnitsPage: React.FC = () => {
             <PlusIcon className="h-5 w-5 mr-2" />
             Create New Unit
           </Link>
-          <button onClick={handleAddUnit} className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-200">
-            <PlusIcon className="h-5 w-5 mr-2" />
-            Quick Add
-          </button>
+          
         </div>
       </div>
       {/* Units Table */}

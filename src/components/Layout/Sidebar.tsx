@@ -29,12 +29,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   }, {
     path: '/units',
     name: 'Units',
-    icon: <RulerIcon className="h-5 w-5" />,
-    subItems: [{
-      path: '/units/create',
-      name: 'Create Unit',
-      icon: <PlusIcon className="h-4 w-4" />
-    }]
+    icon: <RulerIcon className="h-5 w-5" />
   }, {
     path: '/offers',
     name: 'Offers',
