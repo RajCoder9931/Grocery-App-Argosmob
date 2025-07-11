@@ -21,7 +21,7 @@ const OffersPage: React.FC = () => {
   const [editingOffer, setEditingOffer] = useState<Offer | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
 
-  const API_URL = 'http://localhost:5000/api/offers';
+  const API_URL = 'https://grocery-app-argosmob.onrender.com/api/offers';
 
   const fetchOffers = async () => {
     try {

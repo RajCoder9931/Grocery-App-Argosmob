@@ -58,8 +58,8 @@ const ProductForm: React.FC<ProductFormProps> = ({ product, onSave, onCancel }) 
     try {
       const response = await fetch(
         formData._id
-          ? `http://localhost:5000/api/products/${formData._id}`
-          : 'http://localhost:5000/api/products',
+          ? `https://grocery-app-argosmob.onrender.com/api/products/${formData._id}`
+          : 'https://grocery-app-argosmob.onrender.com/api/products',
         {
           method: formData._id ? 'PUT' : 'POST',
           headers: {

@@ -31,7 +31,7 @@ const UnitCreationPage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/units', formData);
+      const response = await axios.post('https://grocery-app-argosmob.onrender.com/api/units', formData);
       const newUnit = response.data;
 
       setRecentUnits([newUnit, ...recentUnits]);

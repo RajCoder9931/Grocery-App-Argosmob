@@ -80,11 +80,11 @@ const OfferForm: React.FC<OfferFormProps> = ({ offer, onSave, onCancel }) => {
       let response;
       if (offer?._id) {
         // Update offer
-        response = await axios.put(`http://localhost:5000/api/offers/${offer._id}`, payload);
+        response = await axios.put(`https://grocery-app-argosmob.onrender.com/api/offers/${offer._id}`, payload);
         alert('Offer updated successfully!');
       } else {
         // Create new offer
-        response = await axios.post(`http://localhost:5000/api/offers`, payload);
+        response = await axios.post(`https://grocery-app-argosmob.onrender.com/api/offers`, payload);
         alert('Offer created successfully!');
       }
       onSave(response.data);

@@ -18,10 +18,10 @@ const CategoriesPage: React.FC = () => {
     description: ''
   });
 
-  const API_URL = 'http://localhost:5000/api/categories';
+  const API_URL = 'https://grocery-app-argosmob.onrender.com/api/categories';
 
 
-  // 🔁 Fetch categories on load
+  //  Fetch categories on load
   useEffect(() => {
     fetchCategories();
   }, []);
@@ -35,14 +35,14 @@ const CategoriesPage: React.FC = () => {
     }
   };
 
-  // ➕ Add category button
+  //  Add category button
   const handleAddCategory = () => {
     setEditingCategory(null);
     setFormData({ name: '', description: '' });
     setIsFormOpen(true);
   };
 
-  // ✏️ Edit category button
+  //  Edit category button
   const handleEditCategory = (category: Category) => {
     setEditingCategory(category);
     setFormData({
@@ -52,7 +52,7 @@ const CategoriesPage: React.FC = () => {
     setIsFormOpen(true);
   };
 
-  // ❌ Delete category
+  //  Delete category
   const handleDeleteCategory = async (id: string) => {
     if (window.confirm('Are you sure you want to delete this category?')) {
       try {
@@ -64,13 +64,13 @@ const CategoriesPage: React.FC = () => {
     }
   };
 
-  // ⌨️ Handle form input
+  //  Handle form input
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // ✅ Handle form submit
+  //  Handle form submit
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {

@@ -26,7 +26,7 @@ const ProductsPage: React.FC = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/products');
+      const res = await axios.get('https://grocery-app-argosmob.onrender.com/api/products');
       setProducts(res.data);
     } catch (err) {
       console.error('Error fetching products:', err);
@@ -46,7 +46,7 @@ const ProductsPage: React.FC = () => {
   const handleDeleteProduct = async (id: string) => {
     console.log("Deleting product with ID:", id);
     try {
-      await axios.delete(`http://localhost:5000/api/products/${id}`);
+      await axios.delete(`https://grocery-app-argosmob.onrender.com/api/products/${id}`);
       fetchProducts(); // ✅ Refresh product list after delete
     } catch (err) {
       console.error('Delete failed:', err);
@@ -57,10 +57,10 @@ const ProductsPage: React.FC = () => {
     try {
       if (editingProduct) {
         // Update
-        await axios.put(`http://localhost:5000/api/products/${product._id}`, product);
+        await axios.put(`https://grocery-app-argosmob.onrender.com/api/products/${product._id}`, product);
       } else {
         // Create
-        await axios.post('http://localhost:5000/api/products', product);
+        await axios.post('https://grocery-app-argosmob.onrender.com/api/products', product);
       }
       fetchProducts(); // ✅ Refresh product list
       setIsFormOpen(false);

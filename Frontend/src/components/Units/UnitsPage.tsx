@@ -20,7 +20,7 @@ const UnitsPage: React.FC = () => {
     description: ''
   });
 
-  const API_URL = 'http://localhost:5000/api/units';
+  const API_URL = 'https://grocery-app-argosmob.onrender.com/api/units';
 
   // Load units on component mount
   const fetchUnits = async () => {
