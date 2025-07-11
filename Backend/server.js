@@ -9,7 +9,7 @@ const productRoutes = require('./Routes/productRoutes'); //  NEW
 const categoryRoutes = require('./Routes/categories');
 const unitRoutes = require('./Routes/Unit');
 const offerRoutes = require('./Routes/offers');
-const orderRoutes = require( './Routes/orders.js');
+// const orderRoutes = require( './Routes/orders.js');
 
 const app = express();
 
@@ -28,7 +28,7 @@ app.use('/api/products', productRoutes);        //  Products  route
 app.use('/api/categories', categoryRoutes);     // category  route
 app.use('/api/units', unitRoutes);              // units  route
 app.use('/api/offers', offerRoutes);            // offers  route
-app.use('/api/orders', orderRoutes);             // orders  route
+// app.use('/api/orders', orderRoutes);             // orders  route
 
 // Start server
 const PORT = process.env.PORT || 5000;
