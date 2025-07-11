@@ -4,7 +4,7 @@ const cors = require('cors');
 require('dotenv').config(); 
 
 // Import routes
-const authRoutes = require('./routes/auth');
+const authRoutes = require('./Routes/auth');
 const productRoutes = require('./Routes/productRoutes'); //  NEW
 const categoryRoutes = require('./Routes/categories');
 const unitRoutes = require('./Routes/Unit');
