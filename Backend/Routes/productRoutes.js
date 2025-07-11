@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const router = express.Router();
-const Product = require('../models/Product');
+const Product = require('../Models/Product');
 
 // Create Product - POST /api/products
 router.post('/', async (req, res) => {
